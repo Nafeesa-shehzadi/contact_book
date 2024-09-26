@@ -1,5 +1,5 @@
 import React, { FC } from "react";
-import { Modal, Box, Typography } from "@mui/material"; // Import MUI components
+import { Modal } from "@mui/material"; // Import MUI components
 import { styled } from "@mui/material/styles";
 import { Contact, Action } from "../types";
 import ContactForm from "./ContactForm";
@@ -12,10 +12,10 @@ interface EditModalProps {
 }
 
 // Styled Box for the Modal content
-const StyledBox = styled(Box)({
-  padding: "20px",
+const StyledModal = styled(Modal)({
+  marginTop: "20px",
   borderRadius: "10px",
-  backgroundColor: "#fff",
+  width: "20%",
 });
 
 const EditModal: FC<EditModalProps> = ({
@@ -25,18 +25,13 @@ const EditModal: FC<EditModalProps> = ({
   dispatch,
 }) => {
   return (
-    <Modal open={showModal} onClose={toggleModal}>
-      <StyledBox>
-        <Typography variant="h6" component="h2" gutterBottom>
-          Update Contact Info
-        </Typography>
-        <ContactForm
-          dispatch={dispatch}
-          dataToEdit={dataToEdit}
-          toggleModal={toggleModal}
-        />
-      </StyledBox>
-    </Modal>
+    <StyledModal open={showModal} onClose={toggleModal}>
+      <ContactForm
+        dispatch={dispatch}
+        dataToEdit={dataToEdit}
+        toggleModal={toggleModal}
+      />
+    </StyledModal>
   );
 };
 

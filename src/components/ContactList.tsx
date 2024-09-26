@@ -25,6 +25,7 @@ const ContactsTitle = styled(Typography)({
   fontSize: "24px",
   fontWeight: "bold",
   marginBottom: "16px",
+  color: "#fff",
 });
 
 const StyledTableCell = styled(TableCell)({

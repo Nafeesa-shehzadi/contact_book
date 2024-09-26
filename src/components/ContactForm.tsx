@@ -8,11 +8,13 @@ const FormContainer = styled(Box)({
   display: "flex",
   justifyContent: "center",
   flexDirection: "column",
-  width: "600px",
+  width: "500px",
   padding: "40px",
   borderRadius: "10px",
   boxShadow: "0 2px 4px rgba(0, 0, 0, 0.2)",
   backgroundColor: "#fff",
+  height: "440px",
+  marginBottom: 20,
 });
 
 const StyledForm = styled("form")({
@@ -41,6 +43,8 @@ const ContactForm: FC<ContactFormProps> = ({
   dataToEdit,
   toggleModal,
 }) => {
+  console.log("ContactForm is rendering"); // Debugging log
+
   const [contact, setContact] = useState({
     firstName: dataToEdit?.firstName || "",
     lastName: dataToEdit?.lastName || "",
