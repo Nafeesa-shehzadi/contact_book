@@ -132,7 +132,7 @@ const Home: React.FC<any> = ({
       </Box>
       {showContactList && state.contacts.length === 0 && (
         <Typography
-          variant="h1"
+          variant="h4"
           sx={{
             color: "#fff",
           }}

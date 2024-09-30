@@ -15,7 +15,8 @@ export interface Search {
   searchTerm: string; // Include the search term
 }
 
+
 export interface Action {
-  type: "ADD_CONTACT" | "UPDATE_CONTACT" | "DELETE_CONTACT" | "SEARCH";
+  type: "ADD_CONTACT" | "UPDATE_CONTACT" | "DELETE_CONTACT" | "SEARCH"|"CLEAR_SEARCH";
   payload: Contact | Update | Search;
 }
